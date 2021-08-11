@@ -1,0 +1,45 @@
+:root {
+    --primario:#9c27b0;
+    --primarioOscuro:#89119d;
+    --secundario:#ffce00;
+    --secundarioOscuro:rgb(233,287,2)
+    --blanco #FFF;
+    --negro: #000;
+
+
+   --fuentePrincipal: 'Staatliches', cursive;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*  para que 1rem valga 10px  */ }
+ *::before, *::after{
+     box-sizing: inherit;
+ }
+/*      GLOBALES    */
+
+ body {
+     background-color: var(--primario);
+     font-size: 1.6rem;
+     line-height: 1.5; /* aplica un interlineado para todo el proyecto (1.5 de la base de la fuente*/
+ }
+ p {
+     font-size: 1.8rem;
+     font-family: Arial, Helvetica, sans-serif;
+     color: var(--blanco);
+ }
+ a {
+     text-decoration: none;
+ }
+ img{
+     width: 100%;
+
+ }
+ .contenedos {
+     max-width: 120rem;
+     margin: 0 auto;
+ }
+ h1, h2, h3 {
+     text-align: center;
+     color: var(--secundario);
+     font-family: var(--fuentePrincipal);
+ }
