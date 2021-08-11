@@ -31,7 +31,7 @@ html {
      text-decoration: none;
  }
  img{
-     width: 100%;
+     max-width: 100%;
 
  }
  .contenedos {
@@ -43,3 +43,6 @@ html {
      color: var(--secundario);
      font-family: var(--fuentePrincipal);
  }
+ h1 {font-size: 4rem;}
+ h2 {font-size: 3.2rem;}
+ h3 {font-size: 3.4rem;}
