@@ -3,9 +3,8 @@
     --primarioOscuro:#89119d;
     --secundario:#ffce00;
     --secundarioOscuro:rgb(233,287,2)
-    --blanco #FFF;
-    --negro: #000;
-
+    --negro: rgb(233, 225, 225);
+    --blanco: #fff;
 
    --fuentePrincipal: 'Staatliches', cursive;
 }
@@ -46,3 +45,43 @@ html {
  h1 {font-size: 4rem;}
  h2 {font-size: 3.2rem;}
  h3 {font-size: 3.4rem;}
+
+ .header  {
+     display: flex;
+     justify-content: center;
+ }
+ .header__logo {
+     margin: 3rem 0;
+ }
+ /** footer **/
+ .footer {
+     background-color: var(--primarioOscuro);
+     padding: 1rem 0;
+     margin-top: 2rem;
+ }
+ .footer__texto {
+     font-family: var(--fuentePrincipal);
+     text-align: center;
+     font-size: 2.2rem;
+ }
+ /**  navegacion  **/
+ .navegacion {
+     background-color: var(--primarioOscuro);
+     margin: 1rem 0;
+     display: flex;
+     justify-content: center;
+     gap: 4rem; /** gap separa los elementos( metodo nuevo **/
+  }
+  .navegacion__enlace {
+      font-family: var(--fuentePrincipal);
+      color: var(--blanco);
+      font-size: 3rem;
+  /** margin-right: 2rem; metodo antiguo con mas soporte en navegadores**/
+  }
+  .navegacion__enlace:last-of-type { /** seudo selector selecciona el ultimo enlace para centrar correctamente"**/
+
+  }
+  .navegacion__enlace--activo,
+  .navegacion__enlace:hover {
+      color: var(--secundario);
+  }
