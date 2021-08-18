@@ -34,7 +34,7 @@ html {
 
  }
  .contenedor {
-     max-width: 120rem;
+     max-width: 100rem;
      margin: 0 auto;
  }
  h1, h2, h3 {
@@ -78,9 +78,7 @@ html {
       font-size: 3rem;
       margin-right: 1rem; /**metodo antiguo con mas soporte en navegadores**/
   }
-  .navegacion__enlace:last-of-type { /** seudo selector selecciona el ultimo enlace para centrar correctamente"**/
-
-  }
+  
   .navegacion__enlace:last-of-type{
       margin: 0;
   }
@@ -91,7 +89,7 @@ html {
   /**  grid  **/
   .grid {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, min-max(0, 1fr));
     gap: 2rem;/*gap short hand de c y r gap*/
     /**
     column-gap: 2rem;
@@ -101,24 +99,43 @@ html {
   @media (min-width: 768px) {
     .grid {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, min-max(0, 1fr));
         align-items: center;
+        
     }
   }
 
   .producto {
       background-color: var(--primarioOscuro);
       padding: 1rem;
+      
 
   }
-  .producto__imagen {
+  .producto__imagen,
+  .grafico--node,
+  .grafico--react {
      width: 100%;
+     height: 100%;
+     background-size: cover;
+     background-repeat: no-repeat;
   }
+  @media (max-width: 768px) {
+    .producto__imagen,
+    .grafico--node,
+    .grafico--react {
+        width: 100%;
+        height: 60%;
+        background-size: cover;
+        background-repeat: no-repeat;
+     }
+  }
+ 
   .producto__informacion {
        text-align: center;
   }
   .producto__nombre {
       font-size: 4rem;
+      word-wrap: break-word;
   }
   .producto__precio {
       font-size: 2.8rem;
@@ -130,6 +147,34 @@ html {
       margin: 1rem auto;
       font-family: var(--fuentePrincipal);
       line-height: 1.1;
-
-
   }
+  /*.grafico {
+      min-height: 30rem;
+      background-size: cover; }  */
+    
+      
+  
+  .grafico--react {
+      grid-row: 2 / 3;
+      grid-column: 1 / 3;
+      background-image: url(../img/grafico1.jpg);
+      grid-column: 1 / 3; /* se aplica a las dos remeras */
+
+    }
+    @media (min-width: 768px) {
+        .grafico--react {
+            grid-row: 2 / 3;
+      
+          }
+    }
+    .grafico--node {
+        background-image: url(../img/grafico2.jpg);
+        grid-row: 8 / 9;
+    }
+  @media (min-width: 768px) {
+    .grafico--node {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+  }
+  
