@@ -177,4 +177,28 @@ html {
         grid-column: 2 / 4;
     }
   }
+  /*       nosotros     */
+  .nosotros {
+      display: grid;
+      grid-template-rows: repeat(2, auto);
+      column-gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+}
+.nosotros__imagen{
+    grid-row: 1/ 2;
+}
+@media (min-width: 768px) {
+    .nosotros__imagen {
+        grid-column: 2/ 3;  
+    }
+}
+    
+ 
+  
   
